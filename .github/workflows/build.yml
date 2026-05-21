@@ -13,8 +13,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Decode keystore
-        run: base64 -d debug.keystore.base64 > debug.keystore
       - name: Generate Gradle wrapper
         run: gradle wrapper --gradle-version 8.7
       - name: Make gradlew executable
