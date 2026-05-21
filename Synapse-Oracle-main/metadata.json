@@ -1,0 +1,6 @@
+{
+  "name": "NúcleoEsencia",
+  "description": "Ecosistema espiritual, gnóstico y astrológico guiado por la sabiduría de Synapse bajo el sello de SYNAPSE STUDIO.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
