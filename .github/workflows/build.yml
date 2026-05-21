@@ -1,3 +1,4 @@
+cat > .github/workflows/build.yml << 'EOF'
 name: Build APK
 on:
   push:
@@ -13,8 +14,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Generate Gradle wrapper
-        run: gradle wrapper --gradle-version 8.7
+      - name: Decode keystore
+        run: base64 -d debug.keystore.base64 > debug.keystore
       - name: Make gradlew executable
         run: chmod +x gradlew
       - name: Build debug APK
@@ -24,3 +25,4 @@ jobs:
         with:
           name: app-debug
           path: app/build/outputs/apk/debug/app-debug.apk
+EOF
